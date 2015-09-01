@@ -121,7 +121,7 @@ for PLATE in [1]:
 
     a='% Xfiducial, Yfiducial='
     b=' mm'
-    c='% Sample, x(mm), y(mm), dx(mm), dy(mm), A(fraction), B(fraction), C(fraction), D(fraction), E(fraction), F(fraction), G(fraction), H(fraction), code(0=sample; 1=spectral reference; 2=ABCD control; 3=EFGH control, 4=half thickness, 5=doublethickness, 10=empty)'
+    c='% Sample, x(mm), y(mm), dx(mm), dy(mm), A(fraction), B(fraction), C(fraction), D(fraction), E(fraction), F(fraction), G(fraction), H(fraction), code(0=sample; 1=spectral reference; 2=ABCD control; 3=EFGH control; 4=half thickness; 5=doublethickness; 10=empty)'
     mainstr='%s%s%s\n%s\n%s' %(a, fidstr, b, c, datastr)
     
     fn='C:/Users/Gregoire/Documents/CaltechWork/platemaps/100mm_4copies10interv/100mm_4copies10interv'
