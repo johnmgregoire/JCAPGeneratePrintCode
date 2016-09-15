@@ -3,9 +3,7 @@ import os, os.path
 import sys, random
 import numpy, pylab
 
-sys.path.append('C:/Users/Gregoire/Documents/PythonCode/JCAP')
 from readplatemap import *
-
 
 def writerandomizedplatemap(modelpath, newpath, randcodes):
     writelines=[]
@@ -53,7 +51,7 @@ def writerandomizedplatemap(modelpath, newpath, randcodes):
 
 
 
-fold='C:/Users/Gregoire/Documents/CaltechWork/platemaps/'
+fold=r'D:\Google Drive\Documents\CaltechWork\platemaps\201608alloy'
 
 #for p1 in ['v8/plate500_100mm_v8_pl1.txt', 'v8/plate500_100mm_v8_pl2.txt']:
 #    p2=p1.replace('v8', 'v8.2')
@@ -71,6 +69,27 @@ fold='C:/Users/Gregoire/Documents/CaltechWork/platemaps/'
 #    p2='100mm_4copies10interv/100mm_4copies10interv1_random.txt'
 #    writerandomizedplatemap(os.path.join(fold, p1), os.path.join(fold, p2), [0, 20, 30, 130])
 
-for p1 in ['Dstep1percent/Dstep1percent.txt']:
-    p2='Dstep1percent/Dstep1percent_randomized.txt'
-    writerandomizedplatemap(os.path.join(fold, p1), os.path.join(fold, p2), [0])
+#for p1 in ['Dstep1percent/Dstep1percent.txt']:
+#    p2='Dstep1percent/Dstep1percent_randomized.txt'
+#    writerandomizedplatemap(os.path.join(fold, p1), os.path.join(fold, p2), [0])
+
+#for p1 in ['Epson6Elementcombinations/Epson6Elementcombinations_plate1.txt']:
+#    p2=p1[:-4]+'_randomized.txt'
+#    writerandomizedplatemap(os.path.join(fold, p1), os.path.join(fold, p2), numpy.arange(30)*100)
+#for p1 in ['Epson6Elementcombinations/Epson6Elementcombinations_plate2.txt']:
+#    p2=p1[:-4]+'_randomized.txt'
+#    writerandomizedplatemap(os.path.join(fold, p1), os.path.join(fold, p2), numpy.arange(20)*100)
+    
+
+#for p1 in ['Epson6Elementcombinations_singleplate\Epson6Elementcombinations_4els_10steps.txt']:
+#    p2=p1[:-4]+'_randomized.txt'
+#    writerandomizedplatemap(os.path.join(fold, p1), os.path.join(fold, p2), [0])
+#for p1 in ['Epson6Elementcombinations_singleplate\Epson6Elementcombinations_4els_10steps_156compsseparate.txt']:
+#    p2=p1[:-4]+'_randomized.txt'
+#    writerandomizedplatemap(os.path.join(fold, p1), os.path.join(fold, p2), [0, 100])   
+
+for p1 in ['alloy_3variations_6alloyels_chanIvolume.txt']:
+    p2=p1[:-4]+'_randomized.txt'
+    writerandomizedplatemap(os.path.join(fold, p1), os.path.join(fold, p2), \
+    [200, 210, 220, 230, 240, 250, 260, 270, 280, 300, 310, 320, 330, 340, 350, 360, 370, 380, 400, 410, 420, 430, 440, 450, 460, 500, 510, 520, 530, 540, 550, 560, 570]\
+    )#0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120, 
