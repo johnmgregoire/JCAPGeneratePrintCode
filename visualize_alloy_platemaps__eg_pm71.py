@@ -5,7 +5,8 @@ import matplotlib.cm as cm
 import matplotlib.colors as colors
 from readplatemap import readsingleplatemaptxt
 from visualize_alloy_platemaps__eg_pm71__userparams import userinputd
-path_pm=r'J:\hte_jcap_app_proto\map\0072_04_0100_mp.txt'
+path_pm=r'J:\hte_jcap_app_proto\map\0072-04-0100-mp.txt'
+
 
 #This lets you visualize the printing for 4 channels that includes A, B and 2 other channels of your choosing
 #The intention is for channel A to contain off-stoichiometric version of the target phase (elements 1 and 2) and channel B contains the under-represented element (element 2) and elements 3 and 4 are alloying elements
@@ -51,11 +52,11 @@ allchans=['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H']
 ignorechans=set(allchans).difference(set(chans))
 
 
-if not 'code' in dlist[0].keys():#this is to fix temporary error in the J platemap where the code is called "I"
-    for d in dlist:
-        d['code']=d['I']
+#if not 'code' in dlist[0].keys():#this is to fix temporary error in the J platemap where the code is called "I"
+#    for d in dlist:
+#        d['code']=d['I']
 
-dlist=[d for d in dlist if d['code']%10==0 and not (False in [d[k]==0. for k in ignorechans])]
+dlist=[d for d in dlist if d['code']%100==0 and not (False in [d[k]==0. for k in ignorechans])]
 
 if userinputd['only_codes_with_alloys']:
     codeset=set([d['code'] for d in dlist if d[chans[2]]>0. or d[chans[3]]>0.])

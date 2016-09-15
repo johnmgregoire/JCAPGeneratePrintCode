@@ -88,8 +88,8 @@ fold=r'D:\Google Drive\Documents\CaltechWork\platemaps\201608alloy'
 #    p2=p1[:-4]+'_randomized.txt'
 #    writerandomizedplatemap(os.path.join(fold, p1), os.path.join(fold, p2), [0, 100])   
 
-for p1 in ['alloy_3variations_6alloyels_chanIvolume.txt']:
+for p1 in ['alloy_3variations_6alloyels_chanIvolume_v2.txt']:
     p2=p1[:-4]+'_randomized.txt'
     writerandomizedplatemap(os.path.join(fold, p1), os.path.join(fold, p2), \
-    [200, 210, 220, 230, 240, 250, 260, 270, 280, 300, 310, 320, 330, 340, 350, 360, 370, 380, 400, 410, 420, 430, 440, 450, 460, 500, 510, 520, 530, 540, 550, 560, 570]\
+    [2000, 2100, 2200, 2300, 2400, 2500, 2600, 2700, 2800, 3000, 3100, 3200, 3300, 3400, 3500, 3600, 3700, 3800, 4000, 4100, 4200, 4300, 4400, 4500, 4600, 5000, 5100, 5200, 5300, 5400, 5500, 5600, 5700]\
     )#0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120, 
