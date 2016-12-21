@@ -28,10 +28,10 @@ def writerandomizedplatemap(modelpath, newpath, randcodes):
         
     k_f=[\
     ('Sample','%04d'),\
-    ('x','%.2f'),\
-    ('y','%.2f'),\
-    ('dx','%.2f'),\
-    ('dx','%.2f'),\
+    ('x','%.3f'),\
+    ('y','%.3f'),\
+    ('dx','%.3f'),\
+    ('dx','%.3f'),\
     ('A','%.3f'),\
     ('B','%.3f'),\
     ('C','%.3f'),\
@@ -51,7 +51,7 @@ def writerandomizedplatemap(modelpath, newpath, randcodes):
 
 
 
-fold=r'D:\Google Drive\Documents\CaltechWork\platemaps\201608alloy'
+fold=r'D:\Google Drive\Documents\CaltechWork\platemaps\genplatemap_100mm_quat10_tern20'
 
 #for p1 in ['v8/plate500_100mm_v8_pl1.txt', 'v8/plate500_100mm_v8_pl2.txt']:
 #    p2=p1.replace('v8', 'v8.2')
@@ -88,8 +88,15 @@ fold=r'D:\Google Drive\Documents\CaltechWork\platemaps\201608alloy'
 #    p2=p1[:-4]+'_randomized.txt'
 #    writerandomizedplatemap(os.path.join(fold, p1), os.path.join(fold, p2), [0, 100])   
 
-for p1 in ['alloy_3variations_6alloyels_chanIvolume_v2.txt']:
+#for p1 in ['alloy_3variations_6alloyels_chanIvolume_v2.txt']:
+#    p2=p1[:-4]+'_randomized.txt'
+#    writerandomizedplatemap(os.path.join(fold, p1), os.path.join(fold, p2), \
+#    [2000, 2100, 2200, 2300, 2400, 2500, 2600, 2700, 2800, 3000, 3100, 3200, 3300, 3400, 3500, 3600, 3700, 3800, 4000, 4100, 4200, 4300, 4400, 4500, 4600, 5000, 5100, 5200, 5300, 5400, 5500, 5600, 5700]\
+#    )#0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120, 
+
+for p1 in ['genplatemap_100mm_quat10_tern20_v3.txt']:
     p2=p1[:-4]+'_randomized.txt'
     writerandomizedplatemap(os.path.join(fold, p1), os.path.join(fold, p2), \
-    [2000, 2100, 2200, 2300, 2400, 2500, 2600, 2700, 2800, 3000, 3100, 3200, 3300, 3400, 3500, 3600, 3700, 3800, 4000, 4100, 4200, 4300, 4400, 4500, 4600, 5000, 5100, 5200, 5300, 5400, 5500, 5600, 5700]\
+    [600, 700, 800, 900, 1000]\
     )#0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120, 
+    
