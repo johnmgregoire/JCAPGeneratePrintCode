@@ -5,7 +5,7 @@ import matplotlib.cm as cm
 import matplotlib.colors as colors
 from readplatemap import readsingleplatemaptxt
 from visualize_alloy_platemaps__eg_pm71__userparams import userinputd
-path_pm=r'J:\hte_jcap_app_proto\map\0071-04-0100-mp.txt'
+path_pm=r'J:\hte_jcap_app_proto\map\0072-04-0100-mp.txt'
 #path_pm=r'D:\Google Drive\Documents\CaltechWork\platemaps\201608alloy\0071-04-0100-mp_Iremovedfixed.txt'
 
 
