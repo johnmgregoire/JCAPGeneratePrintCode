@@ -13,8 +13,7 @@ from myquaternaryutility import QuaternaryPlot
 
 
 sp=r'D:\Google Drive\Documents\CaltechWork\platemaps\4x6_40intervs_5els_near2to1\binarytoquinarycomps.pck'
-with open(sp, mode='rb') as f:
-    comps=pickle.load(f)
+with open(sp, mode='rb') as f: comps=pickle.load(f)
     
 comps=list(comps)
 modelpath=r'D:\Google Drive\Documents\CaltechWork\platemaps\4x6_20intervs_rightcolumnsforcharacterization\0037-04-0730-mp.txt'
@@ -35,7 +34,9 @@ codes=numpy.array([d['code'] for d in dlist])
 xset=sorted(list(set([d['x'] for d in dlist])))
 xposns_refcolumns=numpy.array(xset)[[7, 15, 23, 31, 39, 47, 55, 63]]#range(7, 64, 8)
 xtouse=[x for x in xset if not x in xposns_refcolumns]
-[d.update(code=4, A=0, B=0, C=0, D=0, E=0) for d in dlist if d['x'] in xtouse]
+[d.update(code=4, A=0, B=0, C=0, D=0, E=0, F=0, G=0, H=0) for d in dlist if d['x'] in xtouse]
+#only use references for 5 channels being printed
+[d.update(code=0, A=0, B=0, C=0, D=0, E=0, F=0, G=0, H=0) for d in dlist if (d['F']+d['G']+d['H'])!=0 and not d['x'] in xtouse]
 
 
 xset=sorted(list(set([d['x'] for d in dlist])))
@@ -109,10 +110,10 @@ for d in dlist:
 #    for k in ['A', 'B', 'C', 'D']:
 #        d[k]*=1./intervs
     c=numpy.float64([d[el] for el in ['A', 'B', 'C', 'D']])
-    if c.sum()>0:
-        c/=c.sum()
-        av, bv, cv, dv=c
-        d.update(A=av, B=bv, C=cv, D=dv)#assume only full loading samples in this platemap. This replaces /intrv normalization
+#    if c.sum()>0:
+#        c/=c.sum()
+#        av, bv, cv, dv=c
+#        #d.update(A=av, B=bv, C=cv, D=dv)#assume only full loading samples in this platemap. This replaces /intrv normalization
     d['compositions']=c
 
 k_f=[\
